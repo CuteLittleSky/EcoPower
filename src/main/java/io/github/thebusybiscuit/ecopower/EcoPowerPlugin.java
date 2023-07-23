@@ -124,7 +124,7 @@ public class EcoPowerPlugin extends JavaPlugin implements SlimefunAddon {
         WindTurbine turbine = new WindTurbine(itemGroup, turbineItem, power, RecipeType.ENHANCED_CRAFTING_TABLE, recipe);
         turbine.register(this);
 
-        SlimefunItemStack multiblockItem = new SlimefunItemStack(id + "_MULTIBLOCK", texture, name, "", LoreBuilder.machine(tier, MachineType.GENERATOR), LoreBuilder.powerBuffer(0), LoreBuilder.powerPerSecond(power * 2));
+        SlimefunItemStack multiblockItem = new SlimefunItemStack(id + "_MULTIBLOCK", texture, name, "", LoreBuilder.machine(tier, MachineType.GENERATOR), LoreBuilder.powerBuffer(0), LoreBuilder.powerPerSecond(power));
         new WindTurbineMultiblock(itemGroup, multiblockItem, turbine).register(this);
         return turbine;
     }
@@ -134,7 +134,7 @@ public class EcoPowerPlugin extends JavaPlugin implements SlimefunAddon {
         SteamTurbine turbine = new SteamTurbine(itemGroup, turbineItem, power, RecipeType.ENHANCED_CRAFTING_TABLE, recipe);
         turbine.register(this);
 
-        SlimefunItemStack multiblockItem = new SlimefunItemStack(id + "_MULTIBLOCK", texture, name + "发电机", "", LoreBuilder.machine(tier, MachineType.GENERATOR), LoreBuilder.powerBuffer(0), LoreBuilder.powerPerSecond(power * 2));
+        SlimefunItemStack multiblockItem = new SlimefunItemStack(id + "_MULTIBLOCK", texture, name + "发电机", "", LoreBuilder.machine(tier, MachineType.GENERATOR), LoreBuilder.powerBuffer(0), LoreBuilder.powerPerSecond(power));
         new SteamTurbineMultiblock(itemGroup, multiblockItem, turbine).register(this);
         return turbine;
     }
@@ -150,7 +150,7 @@ public class EcoPowerPlugin extends JavaPlugin implements SlimefunAddon {
     
     private LunarGenerator registerLunarGenerator(ItemGroup itemGroup, String id, String name, int power, ItemStack[] recipe) {
         final String texture = "afdd9e588d2461d2d3d058cb3e0af2b3a3367607aa14d124ed92a833f25fb112";
-        SlimefunItemStack item = new SlimefunItemStack(id, texture, name, "", "&d仅在夜间工作", "", LoreBuilder.machine(MachineTier.END_GAME, MachineType.GENERATOR), LoreBuilder.powerBuffer(0), LoreBuilder.powerPerSecond(power * 2));
+        SlimefunItemStack item = new SlimefunItemStack(id, texture, name, "", "&d仅在夜间工作", "", LoreBuilder.machine(MachineTier.END_GAME, MachineType.GENERATOR), LoreBuilder.powerBuffer(0), LoreBuilder.powerPerSecond(power));
     
         LunarGenerator generator = new LunarGenerator(itemGroup, item, RecipeType.ENHANCED_CRAFTING_TABLE, recipe, power);
         generator.register(this);
@@ -158,7 +158,7 @@ public class EcoPowerPlugin extends JavaPlugin implements SlimefunAddon {
     }
     
     private HighEnergySolarGenerator registerHighEnergySolarGenerator(ItemGroup itemGroup, String id, String texture, String name, int power, ItemStack[] recipe) {
-        SlimefunItemStack item = new SlimefunItemStack(id, texture, name, "", "&d全天运作", "", LoreBuilder.machine(MachineTier.END_GAME, MachineType.GENERATOR), LoreBuilder.powerBuffer(0), LoreBuilder.powerPerSecond(power * 2));
+        SlimefunItemStack item = new SlimefunItemStack(id, texture, name, "", "&d全天运作", "", LoreBuilder.machine(MachineTier.END_GAME, MachineType.GENERATOR), LoreBuilder.powerBuffer(0), LoreBuilder.powerPerSecond(power));
     
         HighEnergySolarGenerator generator = new HighEnergySolarGenerator(itemGroup, item, RecipeType.ENHANCED_CRAFTING_TABLE, recipe, power);
         generator.register(this);
